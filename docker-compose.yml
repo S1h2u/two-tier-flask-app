@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: test@123
       MYSQL_DB: db
     depends_on:
       - mysql
@@ -17,10 +17,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: test@123
       MYSQL_DATABASE: db
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: devops
+      MYSQL_PASSWORD: devops
     volumes:
       - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage
 
